@@ -1,10 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <title>Página Web Personal - Luis Bertiz</title>
 </head>
 <body>
-<h1>Luchito <page></page></h1>
+
+<!-- Barra de navegación -->
+<nav>
+    <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<hr />
+
+<!-- Cabecera principal -->
+<header>
+    <h1>Con mucho gusto, soy Luis Bertiz</h1>
+    <p>Un guajiro apasionado por el futbol, el vallenato, y por aprender todo acerca del mundo de la tecnoglogia.</p>
+    <!-- Enlace con ruta vacía -->
+
+</header>
+
+<hr />
+
+<!-- Sección Sobre mí -->
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Soy un estudiante de ingenieria de sistemas de 7mo semestre, soy jugador de futbol semiprofesional, actualmente
+        soy seleccion guajira, he jugado en 5 departamentos de colombia, y estuve 10 años en la academia formativa del
+        atletico nacional.
+    </p>
+</section>
+
+<hr />
+
+<!-- Tabla de habilidades -->
+<section id="habilidades">
+    <h2>Mis Habilidades En Lenguajes De Programación</h2>
+
+    <!-- Tabla con atributos propios de su naturaleza -->
+    <table border="1" cellpadding="8" cellspacing="0" summary="Tabla de habilidades técnicas y nivel de dominio">
+        <thead>
+        <tr>
+            <th scope="col">Tecnología</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Nivel</th>
+            <th scope="col">Años de experiencia</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>HTML</td>
+            <td>Frontend</td>
+            <td>Aprendiz</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Frontend</td>
+            <td>Aprendiz</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Frontend</td>
+            <td>Aprendiz</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>Fronted</td>
+            <td>Aprendiz</td>
+            <td>2</td>
+        </tr>
+        <tr>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+        </tr>
+        </tfoot>
+    </table>
+</section>
+<hr />
+
+<!-- Sección multimedia -->
+<section id="multimedia">
+    <h2>Multimedia</h2>
+
+    <!-- Imagen -->
+    <figure>
+        <img
+                src="https://i.postimg.cc/zvMsKrws/yo.jpg"
+                width="400"
+                height="400"
+        />
+        <figcaption>Fotografía: Luchito jugando futbol</figcaption>
+    </figure>
+
+    <!-- Video -->
+
+    <iframe width="1257" height="785" src="https://www.youtube.com/embed/u_A9t1yL0FY" title="Mis Penas" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>Video: Un buen vallenatico que siempre escucho antes de jugar</figcaption>
+
+
+    <!-- Audio -->
+    <figure>
+        <p>Podcast de fondo recomendado:</p>
+        <audio
+                src="https://www.w3schools.com/html/horse.mp3"
+                controls
+                preload="metadata">
+            Tu navegador no soporta el elemento audio.
+        </audio>
+        <figcaption>Audio de demostración</figcaption>
+    </figure>
+</section>
+
+<hr />
+
+<!-- Formulario de contacto -->
+<section id="contacto">
+    <h2>Formulario de Contacto</h2>
+
+    <!-- Formulario con atributos: action, method, name -->
+    <form action="" method="post" name="contacto">
+
+        <!-- Campo de texto -->
+        <label for="nombre">Nombre completo:</label><br />
+        <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej: Carlos López"
+                required
+                maxlength="80"
+                autocomplete="name" /><br /><br />
+
+        <!-- Campo de email -->
+        <label for="email">Correo electrónico:</label><br />
+        <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="correo@ejemplo.com"
+                required
+                autocomplete="email" /><br /><br />
+
+        <!-- Campo de teléfono -->
+        <label for="telefono">Teléfono (opcional):</label><br />
+        <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+34 600 000 000"
+                autocomplete="tel"
+                pattern="[+]?[0-9 \-]{7,15}" /><br /><br />
+
+        <!-- Lista desplegable -->
+        <label for="asunto">Asunto:</label><br />
+        <select id="asunto" name="asunto" required>
+            <option value="" disabled selected>Selecciona un asunto</option>
+            <option value="trabajo">Propuesta de trabajo</option>
+            <option value="freelance">Proyecto freelance</option>
+            <option value="colaboracion">Colaboración</option>
+            <option value="otro">Otro</option>
+        </select><br /><br />
+
+        <!-- Textarea para mensaje -->
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+                rows="5"
+                cols="40"
+                minlength="20"
+                maxlength="1000"></textarea><br /><br />
+
+        <!-- Checkbox de privacidad -->
+        <input
+                type="checkbox"
+                id="privacidad"
+                name="privacidad"
+                value="aceptado"
+                required />
+        <label for="privacidad">
+            He leído y acepto la <a href="">política de privacidad</a>.
+        </label><br /><br />
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar mensaje" />
+        <input type="reset" value="Limpiar formulario" />
+
+    </form>
+</section>
+
+<hr />
+
+<!-- Pie de página -->
+<footer>
+    <!-- Comentario: pie de página con redes sociales y contacto -->
+    <p>
+        &copy; 2025 Luis Bertiz &mdash;
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> &middot;
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot;
+        <a href="mailto:ana@ejemplo.com">luis@ejemplo.com</a>
+    </p>
+    <p>Hecho con HTML5.</p>
+</footer>
+
 </body>
 </html>
